@@ -4,7 +4,7 @@ const Picture = ({ picture }) => {
 
   return (
     <div>
-      <Link to={`/pictures/${pictures._id}`}>
+      <Link to={`/pictures/${picture._id}`}>
         <h1>Image goes here?</h1>
         <h1>{picture.Title}</h1>
         <h2>by {picture.Artist} in {picture.year}</h2>
