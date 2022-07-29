@@ -3,7 +3,7 @@ import api from "./apiConfig.js";
 
 export const getPictures = async () => {
   try {
-    const response = await api.get("/picture") //CHECK END POINT; THIS IS BASED ON FLOWCHART
+    const response = await api.get("/pictures")
     return response.data;
   } catch (error) {
     throw error;
