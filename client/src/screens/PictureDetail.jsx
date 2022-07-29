@@ -13,8 +13,8 @@ export const PictureDetail = () => {
   useEffect(() => {
     const fetchPicture = async () => {
       let onePicture = await getPicture(id);
-      let oneComment = await getComments;
       setPicture(onePicture);
+      let oneComment = await getComments;
       setComment(oneComment);
       //feel like this isn't how I should be coding in comments
     };
@@ -24,17 +24,20 @@ export const PictureDetail = () => {
 
   return (
     <div>
-
-      <h1>This is the screen for an individual picture</h1>
-      <div>Image goes here</div>
-
-      <div>{picture}</div>
-
       <div>
-      <button>
+        <h1>{picture.Title}</h1>
+        <img src=
+          {`https://www.artic.edu/iiif/2/${picture.ImageId}/full/843,/0/default.jpg`}
+        />
+                <h2>by {picture.Artist} in {picture.Year}</h2>
+        <p>Tags: {picture.Tags}</p>
+        <p>{picture.Comments}</p>
+      </div>
+      <div>
+        <button>
         <Link to={`/comments`}>View Comments</Link>
       </button>
-      
+
         <button
           onClick={() => {
             createComment(comment._id);
@@ -42,7 +45,7 @@ export const PictureDetail = () => {
           }}
         >
           Add Comment
-      </button>
+        </button>
       </div>
     </div>
   );
