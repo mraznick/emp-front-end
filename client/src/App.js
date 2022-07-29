@@ -1,5 +1,6 @@
 import "./App.css";
 import Nav from "./components/Nav.jsx";
+import Pictures from "./screens/Pictures.jsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
