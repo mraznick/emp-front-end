@@ -23,20 +23,22 @@ export const PictureDetail = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="detail-parent">
       <div>
         <h1>{picture.Title}</h1>
-        <img src=
-          {`https://www.artic.edu/iiif/2/${picture.ImageId}/full/843,/0/default.jpg`}
+        <img
+          src={`https://www.artic.edu/iiif/2/${picture.ImageId}/full/843,/0/default.jpg`}
         />
-                <h2>by {picture.Artist} in {picture.Year}</h2>
+        <h2>
+          by {picture.Artist} in {picture.Year}
+        </h2>
         <p>Tags: {picture.Tags}</p>
         <p>{picture.Comments}</p>
       </div>
       <div>
         <button>
-        <Link to={`/comments`}>View Comments</Link>
-      </button>
+          <Link to={`/comments`}>View Comments</Link>
+        </button>
 
         <button
           onClick={() => {
