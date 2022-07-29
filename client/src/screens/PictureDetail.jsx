@@ -40,6 +40,9 @@ export const PictureDetail = () => {
           <Link to={`/comments`}>View Comments</Link>
         </button>
 
+        <form>
+          Comment box goes here
+        </form>
         <button
           onClick={() => {
             createComment(comment._id);

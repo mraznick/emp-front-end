@@ -10,3 +10,12 @@
   font-size: xx-large;
   padding: 10px;
 }
+
+.comp-artist-name, .comp-artwork-title {
+  margin: 0;
+  padding: 5px;
+}
+
+.comp-artist-name {
+  margin-bottom: 30px;
+}

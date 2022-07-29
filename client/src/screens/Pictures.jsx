@@ -16,7 +16,7 @@ const Pictures = () => {
 
   return (
     <div>
-      <h1>Cool Pics</h1>
+      
       {pictures.map((pictureData) => (
         <Picture key={pictureData._id} picture={pictureData} />
       ))}
