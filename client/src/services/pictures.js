@@ -1,5 +1,4 @@
 import api from "./apiConfig.js";
-//NOT OPERATING; NEED TO UPDATE APICONFIG FILE
 
 export const getPictures = async () => {
   try {
@@ -12,7 +11,7 @@ export const getPictures = async () => {
 
 export const getPicture = async (id) => {
   try {
-    const response = await api.get(`/picture/${id}`);
+    const response = await api.get(`/pictures/${id}`);
     return response.data;
   } catch (error) {
     throw error;

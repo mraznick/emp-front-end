@@ -3,8 +3,8 @@ import axios from 'axios';
 let apiUrl;
 
 const apiUrls = {
-  development: "https://emp-backend-deployment.herokuapp.com/pictures",
-  production: "https://emp-backend-deployment.herokuapp.com/pictures"
+  development: "https://emp-group-project.herokuapp.com",
+  production: "https://emp-group-project.herokuapp.com"
 }
 
 if (window.location.hostname === "localhost") {
