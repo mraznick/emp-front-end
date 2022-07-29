@@ -12,5 +12,7 @@ const Picture = ({ picture }) => {
         <p>{picture.Comments}</p>
       </Link>
     </div>
-  )
-}
+  );
+};
+
+export default Picture;
