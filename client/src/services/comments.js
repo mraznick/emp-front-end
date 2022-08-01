@@ -9,7 +9,7 @@ export const getComments = async () => {
   }
 };
 
-export const getComment = async () => {
+export const getComment = async (id) => {
   try {
     const response = await api.get(`/comments/${id}`);
     return response.data
@@ -18,16 +18,16 @@ export const getComment = async () => {
   }
 }
 
-export const createComment = async () => {
+export const createComment = async (pictureid, comment) => {
   try {
-    const response = await api.post('/comments');
+    const response = await api.post(`/comments/${pictureid}`, comment);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateComment = async (comment) => {
+export const updateComment = async (id, comment) => {
   try {
     const response = await api.put(`/comments/${id}`, comment);
     return response.data;
@@ -36,9 +36,9 @@ export const updateComment = async (comment) => {
   }
 };
 
-export const deleteComment = async (comment) => {
+export const deleteComment = async (id) => {
   try {
-    const response = await api.delete(`/comments/${id}`, comment)
+    const response = await api.delete(`/comments/${id}`)
     return response.data;
   } catch (error) {
     throw error;

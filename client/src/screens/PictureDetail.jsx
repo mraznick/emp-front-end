@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { getComments, createComment } from "../services/comments.js";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getPicture } from "../services/pictures";
+import CommentDetail from "../components/CommentDetail.jsx";
 
-export const PictureDetail = () => {
-  const [picture, setPicture] = useState({});
+export const PictureDetail = ({ userId }) => {
+  const [picture, setPicture] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   let { id } = useParams();
   let navigate = useNavigate();
@@ -16,10 +18,12 @@ export const PictureDetail = () => {
     };
 
     fetchPicture();
-  }, [id]);
+  }, [id, toggle]);
+
+  if(!picture) return <h1>Loading...</h1>
 
   return (
-    <div className="detail-parent">
+    <div className="picture-detail-parent">
       <div>
         <h1 className="artwork-title">{picture.Title}</h1>
         <img
@@ -28,21 +32,16 @@ export const PictureDetail = () => {
         <h2 className="artist-name">
           by {picture.Artist} in {picture.Year}
         </h2>
-        <ul>Tags:
-          <li>{picture.Tags}</li>
+        <ul>
+          Tags:
+          {picture.Tags.map((tag, i) => (
+            <li key={i}>{tag}</li>
+          ))}
         </ul>
-        <p>{picture.Comments}</p>
+
       </div>
       <div>
-
-        <button
-          onClick={() => {
-            createComment(Comment._id);
-            navigate("/comments");
-          }}
-        >
-          Add Comment
-        </button>
+          <CommentDetail picture={picture} pictureId={id} userId={userId} setToggle={setToggle} />
       </div>
     </div>
   );
