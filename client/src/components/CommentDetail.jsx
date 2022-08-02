@@ -37,7 +37,7 @@ export default function CommentDetail({picture, pictureId, userId, setToggle}) {
          <p>{comment.Text}</p>
         )) : null}
       </div>
-      <div>
+      <div className="comment-form">
         <form onSubmit={handleSubmit}>
           <input
             placeholder="Add your thoughts here"
@@ -45,7 +45,7 @@ export default function CommentDetail({picture, pictureId, userId, setToggle}) {
             value={comment.Text}
             onChange={handleChange}
           />
-        <button type="submit">Post Your Comment</button>
+        <button className="submit" type="submit">Post Your Comment</button>
         </form>
       </div>
       <div>

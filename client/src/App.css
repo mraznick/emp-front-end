@@ -9,7 +9,6 @@
   width: 100vw;
   height: 5rem;
   position: relative;
-  background-color: #b80c3c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,11 +16,40 @@
   margin-bottom: 3rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  
+
+  background: linear-gradient(142deg, #b80c3c, #8c2d48);
+    background-size: 400% 400%;
+
+    animation: navbar-anim 7s ease infinite;
 }
+
+@keyframes navbar-anim {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+
+}
+
+
 .Navbar a{
-  color: white;
+  color: #F3F3F3;
 }
+
+.Navbar a:link{
+text-decoration: none;
+}
+
+.Navbar a:visited{
+  text-decoration: none;
+  }
+.Navbar a:hover{
+    text-decoration: underline;
+    }
+
+.Navbar a:active{
+      text-decoration: none;
+      }    
+
 .picture-comp-parent{
   display: flex;
   flex-direction: column;
@@ -29,7 +57,12 @@
   box-shadow:  0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   border-radius: 5px;
   /*border: 1px solid red; */
-} 
+}
+
+.picture-comp-parent:hover{
+  transform: scale(1.01);
+transition: 300ms;
+}
 
 .pictures-map-container{
   display: flex;
@@ -56,14 +89,84 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
+
+
+
 .comment-detail-parent{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .image-box{
   box-shadow:  0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
 
+.image-box:hover{
+  transform: scale(1.01);
+transition: 300ms;
+}
+
+.artwork-title{
+  margin-bottom: 1rem;
+}
+
+.artist-name{
+  margin-top: 1rem;
+}
+
+.comp-artwork-title{
+margin-left: 1rem;
+}
+
+.comp-artist-name{
+  margin-left: 1rem;
+}
+
+.sign-up-form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sign-up-form{
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 1rem;
+  padding-left: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit{
+  background-color: #b80c3c;
+  border: none;
+  color: #F3F3F3;
+  text-align: center;
+  padding: .5rem;
+  box-shadow:  0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+.submit:hover{
+  transform: scale(1.01);
+  transition: 300ms;
+
+}
+
+.input{
+  padding-right: 1rem;
+}
+
+
+.comment-form{
+  padding: 10px;
 }
