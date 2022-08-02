@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser } from "./services/users";
 import Register from "./screens/Register.jsx";
+import SignOut from "./screens/SignOut";
 
 function App() {
   const [user, setUser] = useState(null)
@@ -37,6 +38,8 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser} />} />
 
         <Route path="/register" element={<Register setUser={setUser} />} />
+
+        <Route path="/signout" element={<SignOut />} />
 
         {/* <Route path="/pictures/:id/edit" element={<PictureEdit />} /> */}
         

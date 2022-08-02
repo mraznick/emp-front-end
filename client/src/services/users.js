@@ -76,4 +76,13 @@ export const verifyUser = async () => {
   } catch (error) {
     throw error;
   }
-}
+};
+
+export const signOut = async () => {
+  try {
+    localStorage.removeItem("token")
+    return true
+  } catch (error) {
+    throw error;
+  }
+};
