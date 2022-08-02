@@ -40,9 +40,7 @@ export const PictureDetail = ({ userId }) => {
         </ul>
 
       </div>
-      <div>
-          <CommentDetail picture={picture} pictureId={id} userId={userId} setToggle={setToggle} />
-      </div>
+      <CommentDetail picture={picture} pictureId={id} userId={userId} setToggle={setToggle} />
     </div>
   );
 };

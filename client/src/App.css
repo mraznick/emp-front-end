@@ -1,9 +1,35 @@
-.detail-parent, .picture-comp-parent, .nav, .welcome-text {
+.detail-parent, .welcome-text {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   width: 100vw;
+}
+.Navbar{
+  width: 100vw;
+  height: 5rem;
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.Navbar a{
+  color: white;
+}
+.picture-comp-parent{
+  display: flex;
+  flex-direction: column;
+  min-width: 843px;
+  border: 1px solid red;
+} 
+
+.pictures-map-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .welcome-text {
@@ -18,4 +44,13 @@
 
 .artist-name {
   margin-bottom: 30px;
+}
+.picture-detail-parent{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.comment-detail-parent{
+  margin-bottom: 10vh;
 }
