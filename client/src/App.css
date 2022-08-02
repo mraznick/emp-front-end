@@ -1,0 +1,21 @@
+.detail-parent, .picture-comp-parent, .nav, .welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.welcome-text {
+  font-size: xx-large;
+  padding: 10px;
+}
+
+.artist-name, .artwork-title {
+  margin: 0;
+  padding: 5px;
+}
+
+.artist-name {
+  margin-bottom: 30px;
+}
