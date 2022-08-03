@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { signOut } from "../services/users.js";
 
 const Nav = () => {
   return (
@@ -8,6 +9,7 @@ const Nav = () => {
         <NavLink to="/comments">Comments</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/register">Create Account</NavLink>
+        <NavLink to="/signout" onClick={signOut}>Sign Out</NavLink>
       </div>
   );
 };
