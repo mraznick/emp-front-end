@@ -26,7 +26,7 @@ export const PictureDetail = ({ userId }) => {
     <div className="picture-detail-parent">
       <div>
         <h1 className="artwork-title">{picture.Title}</h1>
-        <img
+        <img className="image-box"
           src={`https://www.artic.edu/iiif/2/${picture.ImageId}/full/843,/0/default.jpg`}
         />
         <h2 className="artist-name">
@@ -40,9 +40,7 @@ export const PictureDetail = ({ userId }) => {
         </ul>
 
       </div>
-      <div>
-          <CommentDetail picture={picture} pictureId={id} userId={userId} setToggle={setToggle} />
-      </div>
+      <CommentDetail picture={picture} pictureId={id} userId={userId} setToggle={setToggle} />
     </div>
   );
 };

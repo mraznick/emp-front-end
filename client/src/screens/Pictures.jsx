@@ -15,12 +15,14 @@ const Pictures = () => {
   }, []);
 
   return (
-    <div>
+    <>
+    <div className="pictures-map-container">
       
       {pictures.map((pictureData) => (
         <Picture key={pictureData._id} picture={pictureData} />
       ))}
     </div>
+    </>
   );
 };
 
