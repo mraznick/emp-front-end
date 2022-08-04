@@ -106,9 +106,8 @@ transition: 300ms;
 }
 
 img {
-width: auto ;
-  max-width: 100% ;
   height: auto ;
+  width: 100%;
 }
 
 .image-box{
