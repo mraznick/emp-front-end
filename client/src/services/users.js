@@ -4,13 +4,13 @@ import jwtDecode from "jwt-decode";
 export const login = async (userData) => {
   try {
     const response = await api.post("/users/login", userData);
-    localStorage.setItem("token", response.data.token)
-    const user = jwtDecode(response.data.token)
-    return user.id
+    localStorage.setItem("token", response.data.token);
+    const user = jwtDecode(response.data.token);
+    return user.id;
   } catch (error) {
     throw error;
   }
-}
+};
 
 export const getUsers = async () => {
   try {
@@ -23,7 +23,7 @@ export const getUsers = async () => {
 
 export const getUserById = async (id) => {
   try {
-    const response = await api.get(`/users/${id}`)
+    const response = await api.get(`/users/${id}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -32,7 +32,7 @@ export const getUserById = async (id) => {
 
 export const getUserByEmail = async (email) => {
   try {
-    const response = await api.get(`/users/${email}`)
+    const response = await api.get(`/users/${email}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -41,10 +41,10 @@ export const getUserByEmail = async (email) => {
 
 export const createUser = async (user) => {
   try {
-    const response = await api.post(`/users/register`, user)
-    localStorage.setItem("token", response.data.token)
-    const user = jwtDecode(response.data.token)
-    return user.id
+    const response = await api.post(`/users/register`, user);
+    localStorage.setItem("token", response.data.token);
+    const user = jwtDecode(response.data.token);
+    return user.id;
   } catch (error) {
     throw error;
   }
@@ -62,7 +62,7 @@ export const updateUser = async (id, user) => {
 export const deleteUser = async (id, user) => {
   try {
     const response = await api.delete(`/users/${id}`, user);
-    return response.data
+    return response.data;
   } catch (error) {
     throw error;
   }
@@ -70,9 +70,9 @@ export const deleteUser = async (id, user) => {
 
 export const verifyUser = async () => {
   try {
-    const token = localStorage.getItem("token")
-    const user = jwtDecode(token)
-    return user.id
+    const token = localStorage.getItem("token");
+    const user = jwtDecode(token);
+    return user.id;
   } catch (error) {
     throw error;
   }
@@ -80,9 +80,10 @@ export const verifyUser = async () => {
 
 export const signOut = async () => {
   try {
-    localStorage.removeItem("token")
-    return true
+    localStorage.removeItem("token");
+    return true;
   } catch (error) {
     throw error;
   }
 };
+

@@ -28,8 +28,8 @@ export default function Login({setUser}) {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="sign-up-form-container">
+      <form className="sign-up-form" onSubmit={handleSubmit}>
         <input
           name="email"
           value={form.email}
@@ -46,7 +46,7 @@ export default function Login({setUser}) {
           placeholder="Password"
         />
 
-        <button type="submit">Submit</button>
+        <button className="submit" type="submit">Submit</button>
 
       </form>
     </div>
