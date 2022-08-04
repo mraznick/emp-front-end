@@ -70,7 +70,7 @@ export const deleteUser = async (id, user) => {
 
 export const verifyUser = async () => {
   try {
-    const token = localStorage.getItem("token");
+    const token = await localStorage.getItem("token");
     const user = jwtDecode(token);
     return user.id;
   } catch (error) {
