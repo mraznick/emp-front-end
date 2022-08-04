@@ -33,13 +33,10 @@ export default function CommentDetail({picture, pictureId, userId, setToggle}) {
         <h2 className="artist-name">
           Share your thoughts on {picture.Title} by {picture.Artist}
         </h2>
-        {picture.Comments.length > 0 ? picture.Comments.map((comment) => (  
-         <p>{comment.Text}</p>
-        )) : null}
       </div>
-      <div className="comment-form">
-        <form onSubmit={handleSubmit}>
-          <input
+      <div className="sign-up-form-container">
+        <form className="sign-up-form" onSubmit={handleSubmit}>
+          <input className="comment-input"
             placeholder="Add your thoughts here"
             name="Text"
             value={comment.Text}
@@ -47,6 +44,9 @@ export default function CommentDetail({picture, pictureId, userId, setToggle}) {
           />
         <button className="submit" type="submit">Post Your Comment</button>
         </form>
+        {picture.Comments.length > 0 ? picture.Comments.map((comment) => (  
+         <p className="comment-text">{comment.Text}</p>
+        )) : null}
       </div>
       <div>
       </div>

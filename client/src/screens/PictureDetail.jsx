@@ -26,7 +26,7 @@ export const PictureDetail = ({ userId }) => {
     <div className="picture-detail-parent">
       <div>
         <h1 className="artwork-title">{picture.Title}</h1>
-        <img className="image-box"
+        <img className="image-box-motionless"
           src={`https://www.artic.edu/iiif/2/${picture.ImageId}/full/843,/0/default.jpg`}
         />
         <h2 className="artist-name">

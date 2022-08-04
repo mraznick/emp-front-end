@@ -32,8 +32,6 @@ function App() {
 
         <Route path="/pictures/:id" element={<PictureDetail userId={user} />} />
 
-        {/* <Route path="/comments/:id" element={<CommentDetail />} /> */}
-
         <Route path="/login" element={<Login setUser={setUser} />} />
 
         <Route path="/register" element={<Register setUser={setUser} />} />
