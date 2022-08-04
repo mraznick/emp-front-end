@@ -33,8 +33,8 @@ export default function CommentDetail({picture, pictureId, userId, setToggle}) {
         <h2 className="artist-name">
           Share your thoughts on {picture.Title} by {picture.Artist}
         </h2>
-        {picture.Comments.length > 0 ? picture.Comments.map((comment) => (  
-         <p>{comment.Text}</p>
+        {picture.Comments.length > 0 ? picture.Comments.map((comment, i) => (  
+         <p key={i}>{comment.Text}</p>
         )) : null}
       </div>
       <div className="comment-form">
